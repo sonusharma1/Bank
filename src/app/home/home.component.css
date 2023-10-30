@@ -1,0 +1,30 @@
+.home-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_img{
+    height: 350px;
+}
+.home_btn{
+    padding: 12px 16px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: #335DFE;
+}
+
+.home-container button:hover{
+    background-color: #163bd1 !important;
+}
+
+.home-container h1{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.home-container p{
+    padding: 15px 55px 0 0;
+    font-size: 1.2rem;
+}

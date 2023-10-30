@@ -1,0 +1,244 @@
+<div class="p-3 bg-warning text-dark d-none {{successClass}}
+">
+    <h6>
+        Adhar not found
+    </h6>
+    <h6>
+        Kindly check !!!!!!!
+    </h6>
+</div>
+
+<div>
+    <div class="adhar_form">
+        <form [formGroup]="form1" (ngSubmit)="onSubmitAdhar()">
+
+            <div class="form-group form-floating" style="width:380px">
+                <input type="text" formControlName="adharno" name="adharNo" class="form-control" id="adharNo"
+                    [(ngModel)]="customerAdharNo" />
+                <label for="adharNo">Aadhar No.:</label>
+                <div *ngIf="f1['adharno'].touched && f1['adharno'].invalid" class="alert alert-danger">
+                    <div *ngIf="f1['adharno'].errors && f1['adharno'].errors['required']">
+                        AadharNo is mandatory**
+                    </div>
+                    <div *ngIf="
+          f1['adharno'].errors && f1['adharno'].errors['minlength']
+        ">
+                        Minimum length must be 12 characters**
+                    </div>
+                    <div *ngIf="
+      f1['adharno'].errors && f1['adharno'].errors['maxlength']
+      ">
+                        Max length must be 12 characters**
+                    </div>
+                </div>
+                <div class="row mt-4 mb-2 ms-1 me-1 ">
+                    <button class="btn btn-success submit-btn" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<div class="d-flex flex-column " style="width: 100%;">
+    <div class="" >
+      <h5 class="" style="text-align: center;">Register Account</h5>
+    </div>
+
+    <div class="create-form mt-4 col-md-7" style="margin: auto;">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="form-group col-md-12 form-floating">
+            <input disabled type="text" class="form-control" id="name"
+              [(ngModel)]="customer.customerName"  required="" value="{{existingCustomer.customerName}}"/>
+            <label class="ps-4" for="name">Name:</label>
+
+            <!-- <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+              <div *ngIf="f['name'].errors && f['name'].errors['cannotContainSpace']">
+                Name can not contain space**
+              </div>
+              <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                Full Name is mandatory**
+              </div>
+              <div *ngIf="f['name'].errors && f['name'].errors['minlength']">
+                Minimum length must be 3 characters**
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="form-group form-floating">
+            <textarea type="text" disabled class="form-control" id="address"
+              [(ngModel)]="customer.customerAddress" value="{{existingCustomer.customerAddress}}" style="height: 100px"></textarea>
+            <label class="ps-4" for="address">Address:</label>
+          </div>
+
+          <!-- <div *ngIf="f['address'].touched && f['address'].invalid" class="alert alert-danger">
+            <div *ngIf="f['address'].errors && f['address'].errors['required']">
+              Address is mandatory**
+            </div>
+            <div *ngIf="f['address'].errors && f['address'].errors['maxlength']">
+              Maximum length must be 20 characters**
+            </div>
+          </div> -->
+        </div>
+
+        <div class="row mt-2">
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="text" disabled class="form-control" id="adharNo"
+              [(ngModel)]="customer.customerAdharNo" value="{{existingCustomer.customerAdharNo}}" />
+            <label for="adharNo">Aadhar No.:</label>
+            <!-- <div *ngIf="f['adharno'].touched && f['adharno'].invalid" class="alert alert-danger">
+              <div *ngIf="f['adharno'].errors && f['adharno'].errors['required']">
+                AadharNo is mandatory**
+              </div>
+              <div *ngIf="
+                  f['adharno'].errors && f['adharno'].errors['minlength']
+                ">
+                Minimum length must be 12 characters**
+              </div>
+              <div *ngIf="
+                  f['adharno'].errors && f['adharno'].errors['maxlength']
+                ">
+                Max length must be 12 characters**
+              </div>
+            </div> -->
+          </div>
+
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="text" disabled class="form-control" id="pan"
+              [(ngModel)]="customer.customerPanNo" value="{{existingCustomer.customerPanNo}}" />
+            <label for="pan">Pan No.:</label>
+            <!-- <div *ngIf="f['panno'].touched && f['panno'].invalid" class="alert alert-danger">
+              <div *ngIf="f['panno'].errors && f['panno'].errors['required']">
+                PanNo is mandatory**
+              </div>
+              <div *ngIf="f['panno'].errors && f['panno'].errors['minlength']">
+                Minimum length must be 10 characters**
+              </div>
+              <div *ngIf="f['panno'].errors && f['panno'].errors['maxlength']">
+                Max length must be 10 characters**
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="text" disabled class="form-control" id="email"
+              [(ngModel)]="customer.customerEmail" value="{{existingCustomer.customerEmail}}"  />
+            <label for="email">Email:</label>
+            <!-- <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+              <div *ngIf="f['email'].errors && f['email'].errors['required']">
+                Email is mandatory**
+              </div>
+              <div *ngIf="f['email'].errors && f['email'].errors['email']">
+                Please give a valid email address!!
+              </div>
+            </div> -->
+          </div>
+
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="text" disabled class="form-control" id="phone"
+              [(ngModel)]="customer.customerPhone" value="{{existingCustomer.customerPhone}}" />
+            <label for="phone">Phone No.:</label>
+            <!-- <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">
+              <div *ngIf="f['phone'].errors && f['phone'].errors['required']">
+                Phone No. is mandatory**
+              </div>
+              <div *ngIf="f['phone'].errors && f['phone'].errors['minlength']">
+                Minimum length must be 10 characters**
+              </div>
+              <div *ngIf="f['phone'].errors && f['phone'].errors['maxlength']">
+                Max length must be 10 characters**
+              </div>
+            </div> -->
+          </div>
+        </div>
+<!-- 
+        <div class="row mt-2">
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="text" formControlName="uname" class="form-control" id="uname" [(ngModel)]="customer.userName"
+               />
+            <label for="uname">Username:</label>
+            <div *ngIf="f['uname'].touched && f['uname'].invalid" class="alert alert-danger">
+              <div *ngIf="f['uname'].errors && f['uname'].errors['required']">
+                UserName is mandatory**
+              </div>
+              <div *ngIf="f['uname'].errors && f['uname'].errors['minlength']">
+                Minimum length must be 2 characters**
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="password" formControlName="pass" class="form-control" id="pass"
+              [(ngModel)]="customer.password"  />
+            <label for="pass">Password:</label>
+            <div *ngIf="f['pass'].touched && f['pass'].invalid" class="alert alert-danger">
+              <div *ngIf="f['pass'].errors && f['pass'].errors['required']">
+                Password is mandatory**
+              </div>
+              <div *ngIf="f['pass'].errors && f['pass'].errors['minlength']">
+                Minimum length must be 6 characters**
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="row mt-2">
+          <div class="form-group col-md-6 form-floating">
+
+            <input type="text" class="form-control" value="Customer" disabled id="role" [(ngModel)]="customer.role" />
+            <label for="role">Role:</label>
+          </div>
+
+          <div class="form-group col-md-6 form-floating">
+
+            <!-- <input type="text" formControlName="at" class="form-control" id="at"
+              [(ngModel)]="customer.accountDetail.accountType" name="accountType" /> -->
+            
+            <select  class="form-control" formControlName="at" id="at" 
+            [(ngModel)]="customer.accountDetail.accountType"  >
+              
+              <option  value="Savings" class="sort_data" >Savings</option>
+              <option value="Current" class="sort_data">Current</option>
+            </select>
+            <label for="at">Account Type:</label>
+            <div *ngIf="f['at'].touched && f['at'].invalid" class="alert alert-danger">
+              <div *ngIf="f['at'].errors && f['at'].errors['required']">
+                Account Type is mandatory**
+              </div>
+              <!-- <div *ngIf="f['at'].errors && f['at'].errors['maxlength']">
+                Maximum length must be 2 characters**
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="form-group col-md-12 form-floating">
+
+            <input type="number" formControlName="abal" class="form-control" id="ab" min="500" max="1000000"
+              [(ngModel)]="customer.accountDetail.accountBalance"  />
+            <label for="ab">Account Balance:</label>
+            <div *ngIf="f['abal'].touched && f['abal'].invalid" class="alert alert-danger">
+              *****Amount should be above 500 Rs.  *****
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 mb-2 ms-1 me-1 ">
+          <button [disabled]="form.invalid" class="btn btn-success submit-btn" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </div>

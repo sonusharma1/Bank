@@ -1,0 +1,107 @@
+.success_msg{
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  
+  .success_msg h6{
+    margin: 0% !important;
+    margin: 0 30px !important;
+  }
+  
+  .contact_page {
+    padding: 40px 20px;
+    background-image: url("src/assets/bg.jpg");
+    background-color: rgb(217, 229, 232);
+    background-blend-mode: color;
+    height: 100vh;
+  }
+  
+  .contact_heading {
+    text-align: center;
+    margin: 20px 0 30px;
+    color: #335dfe;
+  }
+  
+  .contact_container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .contact_detail {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .contact_box {
+    width: 17vw;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .contact_box h3 {
+    font-weight: bold;
+    color: #335dfe;
+    font-size: 1.2rem;
+  }
+  
+  .contact_box p {
+    font-size: 0.9rem;
+  }
+  
+  .contact_form_wrapper {
+    display: flex;
+  }
+  
+  .contact_form {
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 30px 10px;
+    width: 33.5vw;
+    background-color: aqua;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 10px solid rgb(108 198 231 / 42%);
+  
+  }
+  
+  .contact_form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact_input {
+    margin: 16px 13px;
+    border-radius: 5px;
+    padding: 9px 7px;
+    border: none;
+    background-color: rgb(217, 229, 232);
+    /* filter: blur(8px); */
+    /* background:transparent; */
+  }
+  
+  .contact_form_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact_form_btn button {
+    background-color: #335dfe;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+  }

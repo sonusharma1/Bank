@@ -1,0 +1,57 @@
+.alert {
+  
+  margin: 0;
+  padding-top: 2px;
+  background: none;
+  color: rgb(224, 28, 28);
+  font-size: 11px;
+  border: none;
+}
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.success_msg {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.success_msg h6 {
+  margin: 0% !important;
+  margin: 0 30px !important;
+}
+
+.deposit-div {
+  margin-top: 12% !important;
+}
+
+.deposit-card {
+  /* border-radius: 15px;
+    background: #e8e6ff;
+    border: 2px solid; */
+  /* box-shadow: rgba(17, 12, 46, 0.25) 0px 48px 100px 0px; */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(58 120 183 / 8%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 5px solid rgb(250 252 255);
+}
+
+.deposit-btn {
+  background-color: #335dfe !important;
+  border: none;
+}
+
+.deposit-btn:hover {
+  background-color: #2140be !important;
+}
+
+label {
+  font-size: 14px;
+}
+
+input {
+  font-size: 15px;
+}

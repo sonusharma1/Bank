@@ -1,0 +1,133 @@
+<div class="d-flex">
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid mt-3">
+      <a href="/home"
+        ><img
+          class="ps-4 ms-2"
+          src="/assets/logo.png"
+          style="height: 80px"
+          alt="Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" *ngIf="showCustomer">
+            <a
+              class="nav-link"
+              routerLink="home"
+              [routerLinkActive]="['isactive']"
+            >
+              <span class="material-symbols-rounded">home</span>Home</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="showCustomer">
+            <a
+              class="nav-link"
+              routerLink="createaccount"
+              [routerLinkActive]="['isactive']"
+            >
+              <span class="material-symbols-rounded">app_registration</span
+              >Register Account</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="showList">
+            <a
+              class="nav-link"
+              routerLink="customerlist"
+              [routerLinkActive]="['isactive']"
+              ><span class="material-symbols-rounded"> list </span>Customer
+              List</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="showList">
+            <a
+              class="nav-link"
+              routerLink="deposit"
+              [routerLinkActive]="['isactive']"
+              ><span class="material-symbols-rounded"> south_east </span
+              >Deposit</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="showList">
+            <a
+              class="nav-link"
+              routerLink="withdraw"
+              [routerLinkActive]="['isactive']"
+              ><span class="material-symbols-rounded"> north_west </span
+              >Withdraw</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="showList">
+            <a
+              class="nav-link"
+              routerLink="fundtransfer"
+              [routerLinkActive]="['isactive']"
+              ><span class="material-symbols-rounded"> change_circle </span
+              >FundTransfer</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="showCustomer">
+            <a
+              class="nav-link"
+              routerLink="contact"
+              [routerLinkActive]="['isactive']"
+            >
+              <span class="material-symbols-rounded">contact_page</span
+              >Contact</a
+            >
+          </li>
+          <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+            <li class="nav-item">
+              <a
+                href
+                class="logout"
+                (click)="logout()"
+                [routerLinkActive]="['isactive']"
+                ><span class="material-symbols-rounded"> logout </span>LogOut</a
+              >
+            </li>
+          </ul>
+        </ul>
+        <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+          <li class="nav-item">
+            <a
+              href="/login"
+              class="login"
+              routerLink="login"
+              [routerLinkActive]="['isactive']"
+              ><span class="material-symbols-rounded"> login s </span>LogIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <!-- <div class="top-bar mt-3 pt-3 pb-3 d-flex align-items-center flex-row-reverse bd-highlight sticky-top">
+    <span class="material-symbols-outlined ms-3">        account_circle        </span>
+    <span class="material-symbols-outlined ms-2">   notifications    </span>
+
+    <form>
+      <input class="form-control me-2 search1 " type="search" placeholder="Search..." aria-label="Search">
+    </form>
+  </div> -->
+
+    <div class="emp-details">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<!-- <router-outlet></router-outlet> -->

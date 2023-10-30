@@ -1,0 +1,77 @@
+<!-- <div class="p-3 bg-success text-white d-none {{successClass}}
+">
+    <h6>
+      Withdrawal Successful !!!
+    </h6>
+    <h6>
+        Check Balance  !!!!
+    </h6>
+</div> -->
+
+<div class="container deposit-div mt-5" *ngIf="customer">
+
+  <div class="d-flex justify-content-center mt-5">
+    <div class="deposit-card col-md-7 p-5">
+      <div class="d-flex justify-content-center mb-4">
+        <h4 style="color: #b71936;">Withdraw Amount</h4>
+      </div>
+      <form [formGroup]="form" class="gx-4 gy-4" (ngSubmit)="onSubmit()">
+        <div class="row wrapper">
+          <div>
+          <div class=" form-floating">
+            <input type="text" formControlName="acc" class="form-control" placeholder="Enter Account Number"
+              [(ngModel)]="accountNumber" name="accNo">
+            <label class="ps-4" for="floatingTextarea">Enter Account Number*</label>
+          </div>
+          <div *ngIf="f['acc'].touched && f['acc'].invalid" class="alert alert-danger">
+            <div *ngIf="f['acc'].errors && f['acc'].errors['required']">
+              Account Number is mandatory**
+            </div>
+            <div *ngIf="f['acc'].errors && f['acc'].errors['minlength']">
+              Minimum length must be 10 characters**
+            </div>
+          </div>
+          </div>
+
+          <div>
+          <div class=" form-floating">
+            <input type="number" formControlName="amt" class="form-control " placeholder="Enter Amount"
+              [(ngModel)]="amount" name="amout">
+            <label class="ps-4" for="floatingTextarea">Enter Amount*</label>
+          </div>
+          <div *ngIf="f['amt'].touched && f['amt'].invalid" class="alert alert-danger">
+            <div *ngIf="f['amt'].errors && f['amt'].errors['required']">
+              Enter Valid Amount**
+            </div>
+
+          </div>
+          </div>
+
+
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-12 form-floating">
+            <input type="text" formControlName="dsc" class="form-control " placeholder=" Enter Description"
+              [(ngModel)]="description" name="des">
+            <label class="ps-4" for="floatingTextarea">Enter Description</label>
+          </div>
+          <div *ngIf="f['dsc'].touched && f['dsc'].invalid" class="alert alert-danger">
+            <div *ngIf="f['dsc'].errors && f['dsc'].errors['required']">
+              Description required**
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mt-3 d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-outline-secondary mt-2 col-md-12"> Cancel</button>
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary deposit-btn mt-2 p-2 col-md-12"> Withdraw</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

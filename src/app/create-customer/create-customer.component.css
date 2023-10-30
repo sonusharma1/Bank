@@ -1,0 +1,28 @@
+/* .create-account {
+    height: 80vh;
+} */
+.hero img{
+    height: 220px;
+}
+.alert {
+    margin: 0;
+    padding-top: 2px;
+    background: none;
+    color: rgb(224, 28, 28);
+    font-size: 11px;
+    border: none;
+}
+
+label {
+    font-size: 15px;
+    padding-left: 25px;
+}
+input {
+    font-size: 14px !important;
+}
+
+.submit-btn {
+    background-color: #335dfe ;
+    border: none;
+    height: 48px;
+}

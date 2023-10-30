@@ -1,0 +1,222 @@
+<div class="container mt-4 d-flex justify-content-center">
+  <div class="pt-2 col-md-12">
+    <div class="d-flex justify-content-center">
+      <h4>Update Account</h4>
+    </div>
+      <form (ngSubmit)="onSubmit()" class="mt-5">        
+        <div class="row d-flex justify-content-center">
+          <div class="form-group form-floating col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              [(ngModel)]="customer.customerName"
+              name="name"
+            />
+            <label class="ms-2" for="name">Name:</label>
+            <div
+              *ngIf="f['name'].touched && f['name'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                Full Name is mandatory**
+              </div>
+              <div *ngIf="f['name'].errors && f['name'].errors['minlength']">
+                Minimum length must be 3 characters**
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group form-floating col-md-4">
+            
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="customer.customerAddress"
+              name="address"
+            />
+            <label class="ms-2" for="address">Address:</label>
+            <div
+              *ngIf="f['address'].touched && f['address'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['address'].errors && f['address'].errors['required']">
+                Address is mandatory**
+              </div>
+              <div
+                *ngIf="f['address'].errors && f['address'].errors['maxlength']"
+              >
+                Maximum length must be 20 characters**
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="form-group form-floating col-md-4">
+          
+            <input
+              type="text"
+              class="form-control"
+              id="adharNo"
+              [(ngModel)]="customer.customerAdharNo"
+              name="adharNo"
+            />
+            <label class="ms-2" for="adharNo">Aadhar No.:</label>
+            <div
+              *ngIf="f['adharno'].touched && f['adharno'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['adharno'].errors && f['adharno'].errors['required']">
+                AadharNo is mandatory**
+              </div>
+              <div
+                *ngIf="f['adharno'].errors && f['adharno'].errors['minlength']"
+              >
+                Minimum length must be 12 characters**
+              </div>
+              <div
+                *ngIf="f['adharno'].errors && f['adharno'].errors['maxlength']"
+              >
+                Max length must be 12 characters**
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group form-floating col-md-4">
+            
+            <input
+              type="text"
+              class="form-control"
+              id="pan"
+              [(ngModel)]="customer.customerPanNo"
+              name="pan"
+            />
+            <label class="ms-2" for="pan">Pan No.:</label>
+            <div
+              *ngIf="f['panno'].touched && f['panno'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['panno'].errors && f['panno'].errors['required']">
+                PanNo is mandatory**
+              </div>
+              <div *ngIf="f['panno'].errors && f['panno'].errors['minlength']">
+                Minimum length must be 10 characters**
+              </div>
+              <div *ngIf="f['panno'].errors && f['panno'].errors['maxlength']">
+                Max length must be 10 characters**
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="form-group form-floating col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [(ngModel)]="customer.customerEmail"
+              name="email"
+            />
+            <label class="ms-2" for="email">Email:</label>
+            <div
+              *ngIf="f['email'].touched && f['email'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['email'].errors && f['email'].errors['required']">
+                Email is mandatory**
+              </div>
+              <div *ngIf="f['email'].errors && f['email'].errors['email']">
+                Please give a valid email address!!
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group form-floating col-md-4">
+            
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              [(ngModel)]="customer.customerPhone"
+              name="phone"
+            />
+            <label class="ms-2" for="phone">Phone No.:</label>
+            <div
+              *ngIf="f['phone'].touched && f['phone'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['phone'].errors && f['phone'].errors['required']">
+                Phone No. is mandatory**
+              </div>
+              <div *ngIf="f['phone'].errors && f['phone'].errors['minlength']">
+                Minimum length must be 10 characters**
+              </div>
+              <div *ngIf="f['phone'].errors && f['phone'].errors['maxlength']">
+                Max length must be 10 characters**
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="form-group form-floating col-md-4">
+          
+            <input
+              type="text"
+              class="form-control"
+              id="uname"
+              [(ngModel)]="customer.userName"
+              name="username"
+            />
+            <label class="ms-2" for="uname">Username:</label>
+            <div
+              *ngIf="f['uname'].touched && f['uname'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['uname'].errors && f['uname'].errors['required']">
+                UserName is mandatory**
+              </div>
+              <div *ngIf="f['uname'].errors && f['uname'].errors['minlength']">
+                Minimum length must be 2 characters**
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group form-floating col-md-4">
+            
+            <input
+              type="password"
+              class="form-control"
+              id="pass"
+              [(ngModel)]="customer.password"
+              name="password"
+            />
+            <label class="ms-2" for="pass">Password:</label>
+            <div
+              *ngIf="f['pass'].touched && f['pass'].invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f['pass'].errors && f['pass'].errors['required']">
+                Password is mandatory**
+              </div>
+              <div *ngIf="f['pass'].errors && f['pass'].errors['minlength']">
+                Minimum length must be 6 characters**
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row d-flex justify-content-centercol-md-4 mt-4 ms-3 me-3">
+          <div class="col-md-6">
+            <button class="btn btn-success col-md-12" type="submit">Submit</button>
+          </div>
+        </div>
+       
+      </form>
+    
+  </div>
+</div>
+

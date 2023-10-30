@@ -1,0 +1,98 @@
+<div class="p-3 bg-danger text-white d-none {{successClass}}
+">
+    <h6>
+        Error Wrong UserName and Password
+    </h6>
+    <h6>
+       Kindly check !!!!!!!
+    </h6>
+</div>
+
+<div class="log_container">
+  <div class="col-md-6 offset-md-3">
+    <div class="card card-container">
+      <span class="img-container">
+      <img
+        id="profile-img"
+        src="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_960_720.png"
+        class="profile-img-card"
+        height="80px"
+        width="80px"
+      /> 
+      <h5>Sign in</h5>
+      <h6>to continue to BOI</h6>
+    </span>
+      <form
+        *ngIf="!isLoggedIn"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            [(ngModel)]="form.username"
+            required
+            minlength="2"
+            #username="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="f.submitted && username.invalid"
+          >
+          <div *ngIf="username">UserName is required</div>
+            <div *ngIf="username">
+              Username must be at least 2 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            minlength="6"
+            #password="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="f.submitted && password.invalid"
+          >
+            <div *ngIf="password">Password is required</div>
+            <div *ngIf="password">
+              Password must be at least 6 characters
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">
+            Login
+          </button>
+        </div>
+        <div class="form-group">
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="f.submitted && isLoginFailed"
+          >
+            <strong>Please check your username or password!!</strong><br>
+          </div>
+        </div>
+        <br>
+      </form>
+
+      <div class="message"> 
+        {{message}}
+      </div>
+
+</div>

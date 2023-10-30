@@ -1,0 +1,83 @@
+.balance-card{
+    /* border: 1px solid; */
+    height: 150px;
+    border-radius: 15px;
+    background: #7166f9;
+    box-shadow: rgba(17, 12, 46, 0.25) 0px 48px 100px 0px;
+}
+
+.balance span {
+    font-size: 36px;
+    color: #8d7102;
+    background-color: #e0bc30;
+    border-radius: 2px;
+}
+
+.balance h5{
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.balance h4{
+    color: white;
+}
+
+.balance h3 {
+    font-size: 1.5rem;
+}
+
+.balance img {
+    height: 20px;
+}
+
+/* ------------ */
+li{
+    list-style: none;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+.transactions_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transaction_heading{
+    font-size: 1.5rem;
+    color: #212529;
+}
+
+.transaction{
+    width: 500px;
+    padding:14px 35px;
+}
+
+.transaction_img{
+    max-height: 50px;
+    max-width: 50px;
+    margin-right: 25px;
+}
+
+.transaction_date{
+    margin: 0;
+    font-size: 13px;
+    color: grey;
+}
+
+.transaction_desc{
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.sort_by{
+    background-color: #335dfe !important;
+    border: none;
+    width: 500px;
+    color: white;
+    padding:8px 10px;
+    border-radius: 5px;
+    margin-left: 30px;
+}

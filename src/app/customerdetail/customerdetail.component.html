@@ -1,0 +1,40 @@
+<div class="container" *ngIf="customers">
+  <div class="row mt-4">
+    <h4 class="heading d-flex justify-content-center">Customer Details</h4>
+  </div>
+
+  
+    <div class="row profile d-flex justify-content-center mt-5" >
+      <img class="avatar" src="/assets/avatar.svg" alt="avatar">
+      <h5 class="d-flex justify-content-center mt-3">{{customers.customerName}}</h5>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-md-3 form-floating">
+        <input disabled  type="email" class="form-control mt-1"  value="{{customers.customerAdharNo}}">
+        <label class="ps-4" for="floatingInputGrid">Addhar No</label>
+      </div>
+      <div class="col-md-3 form-floating">
+        <input disabled  type="email" class="form-control mt-1"  value="{{customers.customerPanNo}}">
+        <label class="ps-4" for="floatingInputGrid">Pan No</label>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-md-3 form-floating">
+        <input disabled  type="email" class="form-control mt-1"  value="{{customers.customerPhone}}">
+        <label class="ps-4" for="floatingInputGrid">Phone No</label>
+      </div>
+      <div class="col-md-3 form-floating">
+        <input disabled  type="email" class="form-control mt-1"  value="{{customers.customerEmail}}">
+        <label class="ps-4" for="floatingInputGrid">Email</label>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-md-6 form-floating">
+        <input disabled  type="email" class="form-control mt-1"  value="{{customers.customerAddress}}">
+        <label class="ps-4" for="floatingInputGrid">Address</label>
+      </div>
+    </div>
+</div>

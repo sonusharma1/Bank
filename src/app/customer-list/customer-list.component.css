@@ -1,0 +1,88 @@
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-error{
+    display: none
+}
+
+.heading{
+    /* color: #335dfe ; */
+}
+.table
+{
+    /* margin-left: 20px; */
+    font-size: 14px;
+    background: white;
+    border-radius: 5px;
+}
+
+tr{
+    height: 52px    ;
+}
+
+.view-btn {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: #d9e1ff;
+    border: none;
+    color: #0b32cc;
+}
+
+.balance-btn{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: #ede1ff;
+    border: none;
+    color: #5d21b9;
+}
+
+.edit-btn{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: #d6ffd7;
+    border: none;
+    color: #008321;
+}
+
+.delete-btn{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: #ffd6df;
+    border: none;
+    color: #9c0034;
+}
+
+.view-btn, .balance-btn, .edit-btn, delete-btn{
+    font-size: 13px;
+}
+
+
+span {
+    font-size: 15px;
+}
+
+.search-input{
+    font-size: 14px;
+}
+
+.search-btn {
+    border: none;
+    background-color: #4a6fff;
+    margin-left: -47px;
+    border-radius: 0 7px 7px 0;
+}
+
+.search-btn:hover{
+    background-color: #2047e2;
+}
+
+.search-btn img{
+    height: 16px;
+}

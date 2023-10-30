@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row mt-4">
+    <h4 class="heading d-flex justify-content-center">Customer List</h4>
+  </div>
+
+  <div class="row d-flex flex-row-reverse mt-5 me-3">
+    <form class="d-flex col-md-5" (ngSubmit)="search()">
+      <input
+        (ngSubmit)="search()"
+        [(ngModel)]="searchName"
+        name="s"
+        class="form-control me-2 search-input"
+        type="search"
+        placeholder="search here..."
+        aria-label="Search"
+      />
+      <button class="btn btn-primary search-btn" type="submit">
+        <img src="/assets/search2.svg" alt="" />
+      </button>
+    </form>
+  </div>
+
+  <!-- <div class="container col-md-6 d-flex justify-content-center mt-5">
+    <form class="d-flex align-items-center gx-5">
+      <div class="me-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Customer Name"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <span class="material-symbols-outlined"> search </span>
+      </button>
+    </form>
+  </div> -->
+
+  <div class="row ms-4 me-4">
+    <table id="datatable-example" class="table mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Account Number</th>
+          <th>Customer Name</th>
+          <th>Email</th>
+          <th>Account Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.accountDetail.accountNumber }}</td>
+          <td>{{ customer.customerName }}</td>
+          <td>{{ customer.customerEmail }}</td>
+          <td>{{ customer.accountDetail.accountType }}</td>
+          <td>
+            <button
+              class="btn btn-info view-btn"
+              (click)="viewCustomer(customer.accountDetail.accountNumber)"
+            >
+              <span class="material-symbols-outlined"> wysiwyg </span>
+              View
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-info balance-btn"
+              (click)="customerBalance(customer.accountDetail.accountNumber)"
+            >
+              <span class="material-symbols-outlined">
+                account_balance_wallet
+              </span>
+              Balance
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-info edit-btn"
+              (click)="updateCustomer(customer.accountDetail.accountNumber)"
+            >
+              Edit
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-danger delete-btn"
+              (click)="deleteCustomer(customer.accountDetail.accountNumber)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    <div class="{{errClass}}">
+      <p>No customer found.</p>
+    </div>
+  </div>
+</div>

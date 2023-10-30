@@ -1,0 +1,58 @@
+<div class="container mt-5" *ngIf="customer">
+  <div class="row d-flex justify-content-around">
+    <div class="balance col-md-4 ps-4">
+      <h3>Account Status</h3>
+      <div class="balance-card p-4">
+        <div class="row">
+          <div class="col-md-10">
+            <h5>Account Number: {{customer.accountDetail.accountNumber}}</h5>
+          </div>
+          <div class="col-md-2">
+            <span class="material-symbols-outlined"> memory </span>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <h5>Balance</h5>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <h4>₹{{customer.accountDetail.accountBalance}}</h4>
+          </div>
+          <div class="col-md-2">
+            <img src="/assets/visa.png" alt="Visa">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <!--  -->
+      <div class="transactions_container">
+        <h5 class="transaction_heading">Transactions</h5>
+        <select name="cars" id="cars" class="sort_by" (change)="sortBy($event)">
+          <option value="all" class="sort_data">All</option>
+          <option value="debit" class="sort_data"> Debit</option>
+          <option value="credit" class="sort_data">Credit</option>
+        </select>
+
+        <ul class="transaction_list d-flex flex-column
+    ">
+          <li *ngFor="let t of transactions" class="transaction bg-white shadow-sm d-flex justify-content-between align-items-center
+        ">
+            <div class="d-flex align-items-center">
+              <img class="transaction_img" src="assets/avatar{{t.img}}.svg" alt="">
+              <div>
+                <h5 class="transaction_desc">{{t.desc}}</h5>
+                <p class="transaction_date">{{t.date }}</p>
+              </div>
+            </div>
+            <div class="transaction_price {{t.classType}}">{{t.sign}} ₹ {{t.amount}}</div>
+          </li>
+          <li>{{mssg}}</li>
+
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</div>
